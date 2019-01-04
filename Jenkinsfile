@@ -6,7 +6,7 @@ pipeline {
     stages{
         stage("GitClone"){
             steps{
-              git git@github.com:ashanti88/coolwebsite_on_pipeline.git
+              git 'git@github.com:ashanti88/coolwebsite_on_pipeline.git'
             }
 
         }
