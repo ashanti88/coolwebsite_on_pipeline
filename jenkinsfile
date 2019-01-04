@@ -1,10 +1,12 @@
 pipeline {
     agent any
-    properties([pipelineTriggers([cron('* * * * *')])])
+    triggers {
+         cron('* * * * *')
+    }     
     stages{
         stage("GitClone"){
             steps{
-              git 'git@github.com:ashanti88/webserver_with_jenkins.git'
+              git git@github.com:ashanti88/coolwebsite_on_pipeline.git
             }
 
         }
